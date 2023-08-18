@@ -50,18 +50,18 @@ const config = {
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Inspira Enterprise',
+      position: 'Cybersecurity Analyst',
+      from: 'Jan 2022',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://inspiraenterprise.com/',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'Easycybersec',
+      position: 'Voluntary Experience',
+      from: 'Jan 2021',
+      to: 'Apr 2021',
+      companyLink: 'https://easycybersec.com',
     },
   ],
   /* certifications: [
@@ -74,17 +74,17 @@ const config = {
   ], */
   education: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
+      institution: 'Karpagam University',
+      degree: 'B.Tech',
       from: '2015',
       to: '2019',
     },
-    {
+    /*{
       institution: 'Institution Name',
       degree: 'Degree',
       from: '2012',
       to: '2014',
-    },
+    },*/
   ],
 
   // To hide the `My Projects` section, keep it empty.
