@@ -83,32 +83,7 @@ const config = {
       companyLink: 'https://easycybersec.com',
     },
   ],
-  certifications: [
-    {
-      name: 'Practical Ethical Hacking',
-      body: 'By TCM Security',
-      year: 'March 2022',
-      link: 'https://academy.tcm-sec.com/'
-    },
-    {
-      name: 'Practical Web Application Security & Testing',
-      body: 'By TCM Security',
-      year: '',
-      link: 'https://academy.tcm-sec.com/'
-    },
-    {
-      name: 'Intro to Bug Bounty Hunting and Web Application Hacking',
-      body: 'By TheXSSRat',
-      year: 'Aug 2023',
-      link: 'https://inspira.udemy.com/course/uncle-rats-bug-bounty-guide/'
-    },
-    {
-      name: 'Practical Malware Analysis & Triage',
-      body: 'By TCM Security',
-      year: '',
-      link: 'https://academy.tcm-sec.com/'
-    },
-  ], 
+  
   education: [
     {
       institution: 'Karpagam University',
@@ -141,6 +116,33 @@ const config = {
       link: 'https://example.com',
     },
   ],
+
+  certifications: [
+    {
+      name: 'Practical Ethical Hacking',
+      body: 'By TCM Security',
+      year: '',
+      link: 'https://academy.tcm-sec.com/'
+    },
+    {
+      name: 'Practical Web Application Security & Testing',
+      body: 'By TCM Security',
+      year: '',
+      link: 'https://academy.tcm-sec.com/'
+    },
+    {
+      name: 'Intro to Bug Bounty Hunting and Web Application Hacking',
+      body: 'By TheXSSRat',
+      year: '',
+      link: 'https://inspira.udemy.com/course/uncle-rats-bug-bounty-guide/'
+    },
+    {
+      name: 'Practical Malware Analysis & Triage',
+      body: 'By TCM Security',
+      year: '',
+      link: 'https://academy.tcm-sec.com/'
+    },
+  ], 
   // Display blog posts from your medium or dev account. (Optional)
   blog: {
     source: 'medium', // medium | dev
