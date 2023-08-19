@@ -46,6 +46,26 @@ const config = {
     'OWASP Top 10',
     'OSINT',
     'Malware Analysis',
+    'Burp Suite',
+    'Owasp ZAP',
+    'Nessus',
+    'Wireshark',
+    'Wordpress',
+    'Python',
+    'Bash',
+    'Azure',
+    'AWS',
+    'Vultr',
+    'GCP',
+    'Docker',
+    'Linux',
+    'Illustrator',
+    'Photoshop',
+    'After Effects',
+    'Adobe XD',
+    'Figma',
+    'Premiere Pro',    
+    'Bash',    
   ],
   experiences: [
     {
@@ -68,7 +88,25 @@ const config = {
       name: 'Practical Ethical Hacking',
       body: 'By TCM Security',
       year: 'March 2022',
-      link: 'https://example.com'
+      link: 'https://academy.tcm-sec.com/'
+    },
+    {
+      name: 'Practical Web Application Security & Testing',
+      body: 'By TCM Security',
+      year: '',
+      link: 'https://academy.tcm-sec.com/'
+    },
+    {
+      name: 'Intro to Bug Bounty Hunting and Web Application Hacking',
+      body: 'By TheXSSRat',
+      year: 'Aug 2023',
+      link: 'https://inspira.udemy.com/course/uncle-rats-bug-bounty-guide/'
+    },
+    {
+      name: 'Practical Malware Analysis & Triage',
+      body: 'By TCM Security',
+      year: '',
+      link: 'https://academy.tcm-sec.com/'
     },
   ], 
   education: [
