@@ -112,7 +112,7 @@ const config = {
       title: 'Easycybersec',
       description:
         '',
-      imageUrl: 'https://github.com/vckie/vckie.github.io/blob/main/public/ecs.png',
+      imageUrl: 'https://instagram.fkhi15-1.fna.fbcdn.net/v/t51.2885-19/144634475_457950568900737_5033261165657120248_n.jpg?_nc_ht=instagram.fkhi15-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=El6p91OZIo0AX9RCyAU&edm=AEF8tYYBAAAA&ccb=7-5&oh=00_AfASgkS8GTBOdN9E9VD7Mnk2VDFYwo234njxNFDeMlwBNg&oe=64E58A19&_nc_sid=1e20d2&dl=1',
       link: 'https://easycybersec.com',
     },
   ],
