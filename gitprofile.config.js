@@ -117,18 +117,18 @@ const config = {
     },
   ],
 
-  certification: [
+  certifications: [
     {
       name: 'Practical Ethical Hacking',
       body: 'By TCM Security',
       year: '',
-      link: 'https://academy.tcm-sec.com/'
+      link: 'https://academy.tcm-sec.com/p/practical-ethical-hacking-the-complete-course'
     },
     {
       name: 'Practical Web Application Security & Testing',
-      body: 'By TCM Security',
+      body: 'By The Taggart Institute',
       year: '',
-      link: 'https://academy.tcm-sec.com/'
+      link: 'https://taggartinstitute.org/p/pwst'
     },
     {
       name: 'Intro to Bug Bounty Hunting and Web Application Hacking',
@@ -140,7 +140,67 @@ const config = {
       name: 'Practical Malware Analysis & Triage',
       body: 'By TCM Security',
       year: '',
-      link: 'https://academy.tcm-sec.com/'
+      link: 'https://academy.tcm-sec.com/p/practical-malware-analysis-triage'
+    },
+    {
+      name: 'Intro to Regular Expression',
+      body: 'By The Taggart Institute',
+      year: '',
+      link: 'https://taggartinstitute.org/p/intro-to-regular-expressions'
+    },
+     {
+      name: 'Cybersecurity Fundamentals',
+      body: 'By IBM',
+      year: '',
+      link: 'https://www.ibm.com/training/collection/cybersecurityfundamentals'
+    },
+     {
+      name: 'NSE 1 Network Security Associate',
+      body: 'By Fortinet',
+      year: '',
+      link: 'https://training.fortinet.com/local/staticpage/view.php?page=nse_1'
+    },
+     {
+      name: 'NSE 2 Network Security Associate',
+      body: 'By Fortinet',
+      year: '',
+      link: 'https://training.fortinet.com/local/staticpage/view.php?page=nse_2'
+    },
+     {
+      name: 'Practical Phishing Assessments',
+      body: 'By Graham Helton',
+      year: '',
+      link: ''
+    },
+     {
+      name: 'External Pentest Playbook',
+      body: 'By TCM Security',
+      year: '',
+      link: 'https://academy.tcm-sec.com/p/external-pentest-playbook'
+    },
+     {
+      name: 'Google IT Support',
+      body: 'By Google',
+      year: '',
+      link: 'https://www.coursera.org/professional-certificates/google-it-support'
+    },
+     {
+      name: 'Movement, Pivoting and Persistence',
+      body: 'By Joe helle',
+      year: '',
+      link: ''
+    },
+     {
+      name: 'Google Digital Unlocked',
+      body: 'By Google',
+      year: '',
+      link: ''
+    },
+     {
+      name: 'Jr Penetration Tester Learning Path',
+      body: 'By TryHackMe',
+      year: '',
+      link: ''
     },
   ], 
   // Display blog posts from your medium or dev account. (Optional)
