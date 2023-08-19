@@ -277,8 +277,8 @@ const config = {
     },
   },
 blog: {
-    source: 'dev',
-    username: 'arifszn',
+    source: 'medium',
+    username: 'vckie',
     limit: 5,
   },
   
