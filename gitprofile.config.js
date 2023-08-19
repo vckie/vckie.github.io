@@ -105,7 +105,7 @@ const config = {
       title: 'CyberSecPlus',
       description:
         '',
-      imageUrl: 'https://github.com/vckie/vckie.github.io/blob/main/public/Black%20logo%20-%20no%20background.png',
+      imageUrl: 'https://github.com/vckie/vckie.github.io/blob/main/public/Black%20logo%20-%20no%20background%20(1).png',
       link: 'https://cybersec.plus',
     },
     {
