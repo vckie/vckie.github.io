@@ -112,7 +112,7 @@ const config = {
       title: 'Easycybersec',
       description:
         '',
-      imageUrl: 'https://drive.usercontent.google.com/download?id=15C8fD2-JCINaB0azaKnIZKtT6I5lNPYH',
+      imageUrl: 'https://i.pinimg.com/originals/a5/68/fb/a568fb0aa22a7e8899bfefc866cd02c4.jpg',
       link: 'https://easycybersec.com',
     },
   ],
