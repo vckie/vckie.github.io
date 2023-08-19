@@ -117,7 +117,7 @@ const config = {
     },
   ],
 
-  certifications: [
+  certification: [
     {
       name: 'Practical Ethical Hacking',
       body: 'By TCM Security',
