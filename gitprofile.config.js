@@ -102,18 +102,18 @@ const config = {
   // To hide the `My Projects` section, keep it empty.
   externalProjects: [
     {
-      title: 'Project Name',
+      title: 'CyberSecPlus',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+        '',
+      imageUrl: 'https://github.com/vckie/vckie.github.io/blob/main/public/Black%20logo%20-%20no%20background.png',
+      link: 'https://cybersec.plus',
     },
     {
-      title: 'Project Name',
+      title: 'Easycybersec',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-      imageUrl: 'https://via.placeholder.com/250x250',
-      link: 'https://example.com',
+        '',
+      imageUrl: 'https://github.com/vckie/vckie.github.io/blob/main/public/ecs.png',
+      link: 'https://easycybersec.com',
     },
   ],
 
