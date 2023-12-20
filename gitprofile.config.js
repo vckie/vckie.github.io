@@ -100,7 +100,7 @@ const config = {
   ],
 
   // To hide the `My Projects` section, keep it empty.
-  externalProjects: [
+  Volunteer: [
     {
       title: 'CyberSecPlus',
       description:
