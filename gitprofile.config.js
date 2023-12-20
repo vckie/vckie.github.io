@@ -100,20 +100,20 @@ const config = {
   ],
 
   // To hide the `My Projects` section, keep it empty.
-  Volunteer: [
+  externalProjects: [
     {
-      title: 'CyberSecPlus',
+      title: '',
       description:
         '',
-      imageUrl: 'https://i.pinimg.com/280x280_RS/d6/96/f4/d696f4b75c435ec8d08842d14d47628b.jpg',
-      link: 'https://cybersec.plus',
+      imageUrl: '',
+      link: '',
     },
     {
-      title: 'Easycybersec',
+      title: '',
       description:
         '',
-      imageUrl: 'https://i.pinimg.com/originals/a5/68/fb/a568fb0aa22a7e8899bfefc866cd02c4.jpg',
-      link: 'https://easycybersec.com',
+      imageUrl: '',
+      link: '',
     },
   ],
 
