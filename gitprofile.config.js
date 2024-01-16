@@ -30,7 +30,7 @@ const config = {
   },
   resume: {
     fileUrl:
-      'https://rxresu.me/r/jMMS8QUF', // Empty fileUrl will hide the `Download Resume` button.
+      'https://rxresu.me/vignsh0104/vigneshwaran-j', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'IBM Qradar',
