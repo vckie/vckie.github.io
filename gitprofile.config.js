@@ -69,10 +69,17 @@ const config = {
   ],
   experiences: [
     {
+      company: 'QCS',
+      position: 'L1- Threat Intelligence Specialist & Incident Responder',
+      from: 'June 2024',
+      to: 'Present',
+      companyLink: 'https://www.qcs-qatar.com/',
+    },
+    {
       company: 'Inspira Enterprise',
       position: 'Cybersecurity Analyst',
       from: 'Jan 2022',
-      to: 'Present',
+      to: 'June 2024',
       companyLink: 'https://inspiraenterprise.com/',
     },
     {
