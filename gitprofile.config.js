@@ -11,7 +11,7 @@ const config = {
     },
   },
   social: {
-    linkedin: 'vcky',
+    linkedin: 'vkie',
     twitter: 'vckie_',
     mastodon: '',
     facebook: '',
@@ -26,7 +26,7 @@ const config = {
     telegram: '',
     website: 'https://vckie.github.io',
     phone: '',
-    email: 'vignsh@pm.me',
+    email: 'hi@vkie.pro',
   },
   resume: {
     fileUrl:
@@ -69,14 +69,14 @@ const config = {
   ],
   experiences: [
     {
-      company: 'QCS',
-      position: 'L1- Threat Intelligence Specialist & Incident Responder',
+      company: 'QCS - 🇶🇦',
+      position: 'L1 - Threat Intelligence Specialist & Incident Responder',
       from: 'June 2024',
       to: 'Present',
       companyLink: 'https://www.qcs-qatar.com/',
     },
     {
-      company: 'Inspira Enterprise',
+      company: 'Inspira Enterprise - 🇮🇳',
       position: 'Cybersecurity Analyst',
       from: 'Jan 2022',
       to: 'June 2024',
