@@ -1,6 +1,7 @@
 ---
 title : "FunBoxRookie- Walkthrough"
 date : 21-10-2024 01:00:00
+categories : [Writeups,Offsec-Play]
 tags : [Offsec-Play, OSCP]
 ---
 

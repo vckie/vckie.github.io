@@ -1,6 +1,7 @@
 ---
 title : "CyberSploit1- Walkthrough"
 date : 21-10-2024 01:30:00
+categories : [Writeups,Offsec-Play]
 tags : [Offsec-Play, OSCP]
 ---
 

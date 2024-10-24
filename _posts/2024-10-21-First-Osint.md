@@ -1,6 +1,7 @@
 ---
 title : "My First OSINT Challenge"
 date : 21-10-2024
+categories : [Blog,OSINT]
 tags : [OSINT]
 ---
 
