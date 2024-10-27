@@ -230,7 +230,7 @@ Then turn on the VM and wait for 5 min to services up, and Try accessing Qradar 
 
 If you feel slowness, try increasing RAM and core processor count. Simple
 
-Thanks for the time and will see you in Next Blog
+
 
 ## Screenshots
 Here are the sample screenshots UI of IBM QRadar SIEM
@@ -241,3 +241,4 @@ Here are the sample screenshots UI of IBM QRadar SIEM
 ![](https://cdn.vkie.pro/Qradar34.png)
 
 
+Thanks for the time and will see you in Next Blog
