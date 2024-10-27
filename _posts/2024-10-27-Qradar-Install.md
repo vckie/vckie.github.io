@@ -82,16 +82,16 @@ Here appliance ID is for Console 3199, for AppHost 4000
 
 refer below the Appliance ID and its type
 
-1299 Flow Collector
-1400 Data Node
-1599 Event Collector
-1699 Event Processor
-1799 Flow Processor
-1899 Event and Flow Processor
-3199 QRadar SIEM All-in-One (QRadar Console)
-4000 App host appliance
-6500 QRadar Network Insights
-7000 Data Gateway appliance
+*   1299 Flow Collector
+*   1400 Data Node
+*   1599 Event Collector
+*   1699 Event Processor
+*   1799 Flow Processor
+*   1899 Event and Flow Processor
+*   3199 QRadar SIEM All-in-One (QRadar Console)
+*   4000 App host appliance
+*   6500 QRadar Network Insights
+*   7000 Data Gateway appliance
 
 In our case we are installing Qradar SIEM All-in-One 3199, and AppHost 4000,
 
