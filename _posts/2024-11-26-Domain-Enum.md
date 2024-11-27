@@ -1,3 +1,9 @@
+---
+title : "Domain Enumeration - PowerView"
+date : 27-11-2024 01:30:00
+categories : [Red Team, AD Enumeration]
+tags : [Enumeration, Red Team, CRTP]
+---
 
 ### Load Invisishell first
 
