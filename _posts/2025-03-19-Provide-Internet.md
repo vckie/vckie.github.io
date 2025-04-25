@@ -61,7 +61,7 @@ Now our setup is complete.
 
 **Traffic flow diagram** :
 
-![[Pasted image 20250319123749.png]]
+![](https://cdn.vkie.pro/ssh-pivot.jpg)
 
 
 Reference - https://unix.stackexchange.com/questions/116191/give-server-access-to-internet-via-client-connecting-by-ssh
