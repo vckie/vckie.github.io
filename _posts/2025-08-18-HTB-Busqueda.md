@@ -1,5 +1,5 @@
 ---
-title: HTB-Cap
+title: HTB-Busqueda
 date: 18-08-2025 01:30:00
 categories:
   - Writeups
