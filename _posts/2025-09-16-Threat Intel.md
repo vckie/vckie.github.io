@@ -8,32 +8,32 @@ tags:
   - Intelligence
   - CTI
 ---
-![[Pasted image 20250917185049.png]]
+![](https://cdn.vkie.pro/Pasted image 20250917185049.png)
 
 
 
-![[Pasted image 20250917185645.png]]
+![](https://cdn.vkie.pro/Pasted image 20250917185645.png)
 
-![[Pasted image 20250917190115.png]]
-![[Pasted image 20250917190124.png]]
-
-
-![[Pasted image 20250917193946.png]]
+![](https://cdn.vkie.pro/Pasted image 20250917190115.png)
+![](https://cdn.vkie.pro/Pasted image 20250917190124.png)
 
 
-
-![[Pasted image 20250917190503.png]]
-
-![[Pasted image 20250917191545.png]]
-
-![[Pasted image 20250917191822.png]]
+![](https://cdn.vkie.pro/Pasted image 20250917193946.png)
 
 
-![[Pasted image 20250917192122.png]]
+
+![](https://cdn.vkie.pro/Pasted image 20250917190503.png)
+
+![](https://cdn.vkie.pro/Pasted image 20250917191545.png)
+
+![](https://cdn.vkie.pro/Pasted image 20250917191822.png)
 
 
-![[Pasted image 20250917192159.png]]
+![](https://cdn.vkie.pro/Pasted image 20250917192122.png)
 
-![[Pasted image 20250917192229.png]]
 
-![[Pasted image 20250917192242.png]]
+![](https://cdn.vkie.pro/Pasted image 20250917192159.png)
+
+![](https://cdn.vkie.pro/Pasted image 20250917192229.png)
+
+![](https://cdn.vkie.pro/Pasted image 20250917192242.png)
