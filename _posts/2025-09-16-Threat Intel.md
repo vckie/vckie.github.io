@@ -50,3 +50,9 @@ tags:
 ![](https://cdn.vkie.pro/Pasted%20image%2020250917192229.png)
 
 ![](https://cdn.vkie.pro/Pasted%20image%2020250917192242.png)
+
+![](https://cdn.vkie.pro/Pasted%20image%2020250922111617.png)
+
+![](https://cdn.vkie.pro/Pasted%20image%2020250922111725.png)
+
+![](https://cdn.vkie.pro/Pasted%20image%2020250922111754.png)
