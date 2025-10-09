@@ -508,3 +508,5 @@ Thanks for reading, and happy building!
 - Qdrant Documentation: https://qdrant.tech/documentation
 - OpenAI API Documentation: https://platform.openai.com/docs
 - RAG Best Practices: https://www.pinecone.io/learn/retrieval-augmented-generation
+
+![](https://cdn.vkie.pro/Image.jpg)
