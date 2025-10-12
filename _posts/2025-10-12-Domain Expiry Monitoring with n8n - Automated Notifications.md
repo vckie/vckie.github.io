@@ -7,6 +7,10 @@ tags: [n8n, RDAP, Google Sheets, Gmail, Monitoring]
 
 In this blog, we'll explore how to build an automated domain expiry monitoring system using n8n. This workflow tracks your domain names, checks their expiration dates using RDAP (Registration Data Access Protocol), and sends email alerts when renewal is due.
 
+Sample Notification:
+
+![](https://cdn.vkie.pro/Domain-Monitoring.png)
+
 
 ## Overview
 
@@ -28,6 +32,8 @@ Before setting up this workflow, ensure you have:
 - Basic understanding of n8n workflows
 
 ## Workflow Architecture
+
+![](https://cdn.vkie.pro/Domain-Monitoring-workflow.png)
 
 The workflow consists of 10 nodes working together:
 
