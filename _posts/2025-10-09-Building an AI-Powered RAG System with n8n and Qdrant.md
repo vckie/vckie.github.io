@@ -29,6 +29,8 @@ Before we begin, make sure you have:
 - OpenAI API key
 - Basic understanding of n8n workflows
 
+![](https://cdn.vkie.pro/Rag-workflow.png)
+
 ## Part 1: Creating a Qdrant Collection
 
 The first step is to create a collection in Qdrant to store our document embeddings.
