@@ -18,6 +18,8 @@ Managing multiple domain names can be challenging, especially when it comes to t
 - Updating records in Google Sheets
 - Sending beautifully formatted email alerts when domains are approaching expiry
 
+<script src="https://gist.github.com/vckie/311c32d1f749daed5c0890e305c152cb.js"></script>
+
 ## Prerequisites
 
 Before setting up this workflow, ensure you have:
