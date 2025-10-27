@@ -23,7 +23,7 @@ The findings demonstrate that browser extension security is not just an IT polic
 
 ## The Investigation
 
-Between August and October 2025, I've analyzed browser-based file creation events, specifically focusing on:
+Over past three months, I've analyzed browser-based file creation events, specifically focusing on:
 - `.crx` files (Chrome/Edge/Brave extensions)
 - `.xpi` files (Firefox extensions)
 
