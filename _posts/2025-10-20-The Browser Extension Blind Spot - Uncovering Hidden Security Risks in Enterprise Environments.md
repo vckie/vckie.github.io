@@ -1,5 +1,5 @@
 ---
-title: The Browser Extension Blind Spot
+title: The Browser Extension - The SoC's Blind Spot
 date: 20-10-2025 01:30:00
 categories:
   - SOC
