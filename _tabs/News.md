@@ -1,5 +1,5 @@
 ---
 layout: tags
-icon: fas fa-hashtag
+icon: fa-regular fa-newspaper
 order: 6
 ---
