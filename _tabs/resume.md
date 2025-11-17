@@ -3,6 +3,7 @@
 icon: fas fa-file-pdf
 order: 5
 ---
+<iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=191864" style='border:none;'></iframe>
 
 <object data="https://cdn.vkie.pro/resume1.pdf" width="800" height="1000" type='application/pdf'></object>
 
