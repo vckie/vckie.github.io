@@ -6,24 +6,18 @@ order: 6
 
 Testing
 
-<div id="cyber-book" style="width:100%; height:650px; border:1px solid #ddd;">
-    Loading flipbook...
-</div>
+<div id="flip-container" style="width:100%; height:650px;"></div>
 
-<!-- jQuery -->
+{% raw %}
+<link rel="stylesheet" href="/3dflipbook/3dflipbook.css">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-<!-- FlowPaper JS (host this locally or use your hosted version) -->
-<script src="/flowpaper/FlowPaper.js"></script>
+<script src="/3dflipbook/3dflipbook.min.js"></script>
 
 <script>
-    $(function () {
-        $('#cyber-book').FlowPaperViewer({
-            config: {
-                PDFFile: 'https://cdn.vkie.pro/The%20Garden's%20Gentle%20Buzz.pdf',
-                ViewMode: 'FlipBook',
-                AutoDetectLinks: true
-            }
-        });
+  jQuery(function ($) {
+    $('#flip-container').FlipBook({
+      pdf: 'https://books.vkie.pro/storybooks/cyber-book-1.pdf'
     });
+  });
 </script>
+{% endraw %}
