@@ -6,20 +6,24 @@ order: 6
 
 Testing
 
-<div class="flipbook-container" style="width:100%;height:600px;"></div>
+<div id="cyber-book" style="width:100%; height:650px; border:1px solid #ddd;">
+    Loading flipbook...
+</div>
 
+<!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<!-- Include 3D FlipBook JS + CSS from the plugin files -->
-<link rel="stylesheet" href="/3dflipbook/3dflipbook.css">
-<script src="/3dflipbook/3dflipbook.min.js"></script>
+
+<!-- FlowPaper JS (host this locally or use your hosted version) -->
+<script src="/flowpaper/FlowPaper.js"></script>
 
 <script>
-  jQuery(function ($) {
-    var options = {
-      pdf: 'https://cdn.vkie.pro/The%20Garden's%20Gentle%20Buzz.pdf'
-      // plus any other options you like: controls, backgrounds, etc.
-    };
-
-    $('.flipbook-container').FlipBook(options);
-  });
+    $(function () {
+        $('#cyber-book').FlowPaperViewer({
+            config: {
+                PDFFile: 'https://cdn.vkie.pro/The%20Garden's%20Gentle%20Buzz.pdf',
+                ViewMode: 'FlipBook',
+                AutoDetectLinks: true
+            }
+        });
+    });
 </script>
