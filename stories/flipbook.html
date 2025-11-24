@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cyber Storybook Flipbook</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #fff;
+      height: 100%;
+      overflow: hidden;
+    }
+    .flipbook-container {
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
+
+  <!-- 3D FlipBook CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/css/white-book-view.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/css/font-awesome.min.css">
+</head>
+<body>
+
+  <div class="flipbook-container">
+    Loading flipbook...
+  </div>
+
+  <!-- Core libraries -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.181.2/build/three.min.js"></script>
+
+  <!-- 3D FlipBook main script -->
+  <script src="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/dist/flip-book.min.js"></script>
+
+  <script>
+    jQuery(function ($) {
+      $('.flipbook-container').FlipBook({
+        pdf: 'https://cdn.vkie.pro/The%20Garden's%20Gentle%20Buzz.pdf'   // TODO: put your R2 PDF URL here
+      });
+    });
+  </script>
+</body>
+</html>
