@@ -16,7 +16,7 @@ Testing
 <script>
   jQuery(function ($) {
     $('#flip-container').FlipBook({
-      pdf: 'https://books.vkie.pro/storybooks/cyber-book-1.pdf'
+      pdf: 'https://cdn.vkie.pro/The%20Garden's%20Gentle%20Buzz.pdf'
     });
   });
 </script>
