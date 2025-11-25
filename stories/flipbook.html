@@ -19,9 +19,11 @@
     }
   </style>
 
-  <!-- 3D FlipBook CSS (CDN) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/css/white-book-view.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/css/font-awesome.min.css">
+  <!-- 3D FlipBook CSS (from its own package) -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/css/white-book-view.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -29,11 +31,11 @@
     Loading flipbook...
   </div>
 
-  <!-- Core libraries -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.181.2/build/three.min.js"></script>
+  <!-- Core libraries (the ones bundled with 3D FlipBook) -->
+  <script src="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/js/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/js/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/js/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/js/three.min.js"></script>
 
   <!-- 3D FlipBook main script -->
   <script src="https://cdn.jsdelivr.net/npm/3d-flip-book@1.9.9/dist/flip-book.min.js"></script>
@@ -41,7 +43,10 @@
   <script>
     jQuery(function ($) {
       $('.flipbook-container').FlipBook({
-        pdf: 'https://cdn.vkie.pro/The%20Garden's%20Gentle%20Buzz.pdf'   // TODO: put your R2 PDF URL here
+        // NOTE:
+        // 1) use DOUBLE quotes in JS
+        // 2) URL-encode the apostrophe as %27
+        pdf: "https://cdn.vkie.pro/The%20Garden%27s%20Gentle%20Buzz.pdf"
       });
     });
   </script>
