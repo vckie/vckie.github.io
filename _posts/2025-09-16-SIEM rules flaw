@@ -1,0 +1,278 @@
+---
+title: The Hidden Flaw in Your SIEM: How Attackers Bypass Email Detection Rules
+date: 22-10-2025 01:30:00
+categories:
+  - SOC
+  - SIEM
+  - Defensive
+  - Analysis
+  - Threat Hunting
+  - Phishing
+tags:
+  - phishing
+  - threat
+  - mail
+---
+
+# The Hidden Flaw in Your SIEM: How Attackers Bypass Email Detection Rules Using Substring Whitelisting
+
+**A critical detection gap that may have been lurking in your environment for years**
+
+---
+
+## Introduction
+
+During a routine review of phishing detection rules in a SIEM environment, I discovered something that stopped me in my tracks — a fundamental flaw in how email-based whitelisting was implemented. The logic had been running in production for over five years, silently creating a window that sophisticated attackers could exploit.
+
+This isn't about a zero-day vulnerability or an advanced persistent threat. It's about a simple logic error that exists in countless security environments right now. And if you're using substring-based whitelisting in your detection rules, you might be vulnerable too.
+
+---
+
+## The Problem: Substring Matching in Email Whitelisting
+
+Many SIEM platforms, including QRadar, Splunk, and others, use rules to reduce false positives from phishing detection. A common approach is to whitelist trusted domains — if an email appears to come from a known legitimate source, skip the alert.
+
+Here's what that logic typically looks like:
+
+```
+and NOT when the event matches Username or Sender contains any of 
+[@acme-corp.com, .gov.xx, @globaltech.com, logistics-inc.com, partner-it.com]
+```
+
+The intention is clear: if the sender contains a trusted domain, treat it as legitimate and don't flag it. But there's a critical oversight in this approach.
+
+**Substring matching doesn't understand email structure.**
+
+---
+
+## The Exploit: Crafting Bypass Email Addresses
+
+An email address has two distinct parts:
+
+```
+local-part     @      domain
+─────────────────────────────────
+hacker.gov.xx  @   malicious.com
+```
+
+**Only the domain part matters for trust validation — not the local-part.**
+
+When we whitelist using substring matching, we're checking if the trusted string appears *anywhere* in the email address — including the local-part before the `@` symbol.
+
+This means an attacker can craft email addresses like:
+
+| Malicious Email | Why It Bypasses Detection |
+|-----------------|---------------------------|
+| `hacker.gov.xx@malicious.com` | Contains `.gov.xx` in local-part |
+| `support.acme-corp.com@attacker.org` | Contains `acme-corp.com` in local-part |
+| `admin@gov.xx.evil.com` | Contains `gov.xx` as subdomain |
+| `alerts@acme-corp.com.phishing.ru` | Contains trusted domain in subdomain chain |
+| `globaltech.com.helpdesk@phish.io` | Trusted domain buried in local-part |
+
+The substring check sees `.gov.xx` or `@acme-corp.com` and immediately whitelists the message. **The phishing email bypasses detection entirely.**
+
+---
+
+## Can Attackers Actually Create Such Email Addresses?
+
+**Absolutely.** There are virtually no restrictions on what you can put in the local-part of an email address. Anyone can:
+
+1. Register any available domain (e.g., `attacker-mail.com`)
+2. Set up a mail server
+3. Create addresses like `trusted.company.com@attacker-mail.com`
+
+It's trivial, costs almost nothing, and requires no special technical skills. Attackers already use this technique in real-world phishing campaigns.
+
+---
+
+## Common Misconceptions and Why They Don't Work
+
+### "What if I use `does not contain` instead?"
+
+Some might argue that inverting the logic helps:
+
+```
+and when the event matches Username or Sender does NOT contain any of 
+[@acme-corp.com, .gov.xx, @globaltech.com]
+```
+
+**This doesn't solve the problem.** After boolean inversion, this is logically equivalent to the original substring matching. The bypass still works because `hacker.gov.xx@malicious.com` still "contains" the trusted string.
+
+### "What if I include the @ symbol in my whitelist?"
+
+You might think whitelisting `@gov.xx` instead of just `gov.xx` is safer.
+
+**It's still bypassable.** Consider these valid email addresses:
+
+```
+hacker@acme-corp.gov.xx.attacker.com
+random@gov.xx.attacker.net
+```
+
+All of these strings contain `@gov.xx` somewhere in the full email address, so your SIEM rule sees:
+
+```
+Sender CONTAINS "@gov.xx" → mark as trusted
+```
+
+But the REAL domain is NOT `gov.xx` — it's `attacker.com` or `attacker.net`. The bypass succeeds.
+
+### "What about double @ symbols like `fake@gov.xx@evil.com`?"
+
+This specific format is actually **invalid** — email standards only allow one unquoted `@` symbol. Most mail systems will reject it.
+
+**But here's the critical point: attackers don't need this invalid format.** They have plenty of valid syntaxes that still bypass your rules:
+
+- `fake.gov.xx@evil.com` ✅ Valid
+- `fake@gov.xx.evil.com` ✅ Valid  
+- `gov.xx.support@attacker.com` ✅ Valid
+- `user.logistics-inc.com@phish.io` ✅ Valid
+
+All of these are syntactically valid, easily created, and will bypass substring-based whitelisting.
+
+---
+
+## The Core Principle
+
+**If you want to whitelist a domain, whitelist the DOMAIN — not the entire email address.**
+
+The fundamental rule of detection engineering for email:
+
+- ❌ **Wrong:** `Sender contains "gov.xx"`
+- ❌ **Wrong:** `Sender contains "@acme-corp.com"`  
+- ✅ **Correct:** `sender_domain = "gov.xx"`
+- ✅ **Correct:** `sender_domain IN trusted_domains`
+
+You must extract and validate only the portion after the `@` symbol.
+
+---
+
+## The Fix: Proper Domain Validation
+
+### Step 1: Extract the Sender Domain
+
+Parse the email address to extract only the domain portion:
+
+```
+user@example.com → example.com
+hacker.gov.xx@evil.com → evil.com
+admin@gov.xx.attacker.net → gov.xx.attacker.net
+```
+
+In QRadar, this is done at the DSM or custom property level.
+
+### Step 2: Use Reference Sets with Exact Domain Matching
+
+Instead of substring matching, validate against a reference set:
+
+```
+when sender_domain is NOT in reference set trusted_email_domains
+```
+
+This ensures:
+- `hacker.gov.xx@evil.com` → domain = `evil.com` → **FLAGGED**
+- `admin@gov.xx.attacker.net` → domain = `gov.xx.attacker.net` → **FLAGGED**
+- `legitimate.user@gov.xx` → domain = `gov.xx` → **TRUSTED**
+
+### Step 3: Use Anchored Regex (If Needed)
+
+If your platform supports it, use anchored regex to validate the domain:
+
+```regex
+^[A-Za-z0-9._%+-]+@(gov\.xx|acme-corp\.com|globaltech\.com)$
+```
+
+This regex:
+- **Blocks:** `hacker.gov.xx@hacker.com` (doesn't end in trusted domain)
+- **Blocks:** `admin@gov.xx.evil.com` (ends in `evil.com`)
+- **Allows:** `person@gov.xx` ✅
+
+The key is the `$` anchor — it ensures the domain must be at the **end** of the address.
+
+---
+
+## Performance Considerations
+
+A common concern: "Will regex-based matching hurt SIEM performance?"
+
+**Short answer: Not if done correctly.**
+
+### When Regex Hurts Performance
+
+- Running regex on huge payloads (full raw events)
+- Using unanchored, greedy patterns like `.*gov\.xx.*`
+- Multiple complex regex tests in a single rule
+- Applying regex to every event without pre-filtering
+
+### The Efficient Approach
+
+1. **Parse once at DSM/custom property level** — Extract `sender_domain` during log ingestion
+2. **Use reference sets for comparison** — Simple set membership is faster than regex
+3. **Apply anchored regex on small fields only** — A short regex on a 50-character email domain field has negligible impact
+4. **Test your rules** — Use simulation to understand hit rates before deployment
+
+A well-anchored regex like:
+
+```regex
+^(gov\.xx|acme-corp\.com|globaltech\.com)$
+```
+
+...applied to an extracted `sender_domain` field has **virtually no meaningful performance impact**.
+
+---
+
+## Additional Security Layers
+
+Beyond fixing the substring logic, consider these complementary controls:
+
+### SPF/DKIM/DMARC Validation
+
+Even if a sender claims to be `ceo@gov.xx`, if SPF/DKIM/DMARC validation fails, treat it as a spoof. Incorporate authentication results into your detection logic.
+
+### Header Analysis
+
+Attackers often spoof the "From:" header but cannot easily spoof:
+- Return-Path
+- Authentication-Results
+- Received-SPF
+
+These headers provide additional signals for detection.
+
+### Behavioral Analytics
+
+Layer behavioral detection on top of header-based rules. Unusual sending patterns, first-time senders to VIPs, or geographic anomalies can catch phishing that slips through header-based detection.
+
+---
+
+## Implementation Checklist
+
+1. **Audit existing rules** — Identify all rules using substring-based email whitelisting
+2. **Create custom properties** — Extract `sender_domain` at the DSM/parsing level
+3. **Build reference sets** — Create validated lists of trusted domains with exact matching
+4. **Update rule logic** — Replace `contains` with exact match against extracted domains
+5. **Implement anchored regex** — For cases where reference sets aren't sufficient
+6. **Test thoroughly** — Verify rules correctly identify both legitimate emails and bypass attempts
+7. **Document changes** — Update detection documentation and runbooks
+8. **Monitor for gaps** — Regularly review rules as new trusted domains are added
+
+---
+
+## Conclusion
+
+Security detection is only as strong as its weakest logic. A rule that's been running for five years isn't necessarily a good rule — it might just be a rule that's never been properly tested against motivated attackers.
+
+Substring-based email whitelisting is a pattern that needs to retire. It creates a false sense of security while leaving the door open for anyone who understands how email addresses actually work.
+
+The fix isn't complex:
+
+> **We should not whitelist using the full email address. We must extract the actual sender domain (the portion after "@") and validate only at the domain level.**
+
+Take the time to audit your environment. The change is straightforward, but the gap it closes is significant.
+
+---
+
+*Any additional inputs or recommendations to strengthen email-based detection are always welcome. If you've encountered similar gaps or have alternative approaches, I'd love to hear your thoughts.*
+
+---
+
+**Tags:** #SIEM #QRadar #Splunk #Phishing #DetectionEngineering #EmailSecurity #BlueTeam #SOC #ThreatDetection
