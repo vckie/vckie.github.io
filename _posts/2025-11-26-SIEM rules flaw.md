@@ -1,17 +1,18 @@
 ---
-title: The Hidden Flaw in Your SIEM: How Attackers Bypass Email Detection Rules
-date: 22-10-2025 12:30:00
+title: The Browser Extension - The SoC's Blind Spot
+date: 20-10-2025 01:30:00
 categories:
   - SOC
   - SIEM
   - Defensive
   - Analysis
   - Threat Hunting
-  - Phishing
 tags:
-  - phishing
+  - extensions
+  - chrome
+  - edge
+  - firefox
   - threat
-  - mail
 ---
 
 # The Hidden Flaw in Your SIEM: How Attackers Bypass Email Detection Rules Using Substring Whitelisting
