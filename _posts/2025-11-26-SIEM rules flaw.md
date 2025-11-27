@@ -1,5 +1,5 @@
 ---
-title: How Attackers Bypass SIEM Email Detection (And How to Fix It)
+title: The Hidden Flaw in Your SIEM
 date: 20-10-2025 01:30:00
 categories:
   - SOC
@@ -20,9 +20,8 @@ tags:
   - detection-engineering
 ---
 
-# The Hidden Flaw in Your SIEM: How Attackers Bypass Email Detection Rules Using Substring Whitelisting
 
-**A critical detection gap that may have been lurking in your environment for years**
+**A critical detection gap that may have been lurking in your environment for years, See How Attackers Bypass Email Detection Rules Using Substring Whitelisting**
 
 ---
 
