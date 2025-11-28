@@ -1,6 +1,6 @@
 ---
 title: The Hidden Flaw in Your SIEM
-date: 20-10-2025 01:30:00
+date: 25-10-2025 01:30:00
 categories:
   - SOC
   - SIEM
