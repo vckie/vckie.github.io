@@ -1,5 +1,5 @@
 ---
-title: stories
+title: The Cybersec Times
 icon: fa-regular fa-newspaper
 order: 6
 ---
