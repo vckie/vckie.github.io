@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<div class="story-page">
+  <article>
+    <header>
+      <h1>{{ page.icon }} {{ page.title }}</h1>
+      {% if page.description %}
+        <p class="lead">{{ page.description }}</p>
+      {% endif %}
+      <div class="post-meta text-muted">
+        <i class="far fa-calendar-alt fa-fw me-1"></i>
+        <time>{{ page.date | date: "%b %d, %Y" }}</time>
+      </div>
+    </header>
+
+    <div class="pdf-container">
+      <object data="{{ page.pdf | relative_url }}" width="100%" height="1000" type='application/pdf'>
+        <p>Unable to display PDF. <a href="{{ page.pdf | relative_url }}" download>Download instead</a>.</p>
+      </object>
+    </div>
+  </article>
+
+  <div class="mt-4">
+    <a href="{{ '/stories/' | relative_url }}" class="btn btn-outline-primary">
+      <i class="fas fa-arrow-left"></i> Back to Stories
+    </a>
+  </div>
+</div>
+
+<style>
+  .story-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .story-page h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .story-page .lead {
+    font-size: 1.2rem;
+    color: var(--text-muted-color);
+    margin-bottom: 1rem;
+  }
+
+  .pdf-container {
+    margin-top: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .pdf-container object {
+    display: block;
+    min-height: 600px;
+  }
+</style>
