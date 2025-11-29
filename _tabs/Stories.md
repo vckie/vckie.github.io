@@ -1,5 +1,5 @@
 ---
-# the default layout is 'page'
+title: stories
 icon: fa-regular fa-newspaper
 order: 6
 ---
