@@ -16,7 +16,13 @@ order: 6
   {% else %}
     {% for story in sorted_stories %}
       <a href="{{ story.url | relative_url }}" class="story-card" style="text-decoration: none;">
-        <div class="story-icon">{{ story.icon | default: "📖" }}</div>
+        <div class="story-icon">
+          {% if story.icon contains 'http' %}
+            <img src="{{ story.icon }}" alt="{{ story.title }}" style="width: 3rem; height: 3rem; object-fit: cover; border-radius: 8px;">
+          {% else %}
+            {{ story.icon | default: "📖" }}
+          {% endif %}
+        </div>
         <h3 class="story-title">{{ story.title }}</h3>
         <p class="story-description">{{ story.description }}</p>
         <div class="story-meta">
