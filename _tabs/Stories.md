@@ -18,7 +18,7 @@ order: 6
       <a href="{{ story.url | relative_url }}" class="story-card" style="text-decoration: none;">
         <div class="story-icon">
           {% if story.icon contains 'http' %}
-            <img src="{{ story.icon }}" alt="{{ story.title }}" class="noImagePopup" style="width: 3rem; height: 3rem; object-fit: cover; border-radius: 8px;">
+            <div style="width: 3rem; height: 3rem; background-image: url('{{ story.icon }}'); background-size: cover; background-position: center; border-radius: 8px;"></div>
           {% else %}
             {{ story.icon | default: "📖" }}
           {% endif %}
