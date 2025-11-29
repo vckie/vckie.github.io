@@ -1,8 +1,8 @@
 ---
-title: "Red Team Chronicles"
-icon: "🔴"
-pdf: "/assets/pdfs/sample.pdf"
-description: "Tales from the offensive security trenches - sample story to demonstrate the system"
+title: "The Secret of the Shifted Letters"
+icon: "https://cdn.vkie.pro/stories/decode.png"
+pdf: "https://cdn.vkie.pro/stories/The%20Secret%20of%20the%20Shifted%20Letters.pdf"
+description: "The Secret of the Shifted Letters - Decode"
 date: 2025-11-26
 ---
 
